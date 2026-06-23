@@ -1,43 +1,44 @@
-# Vietnamese-Sentiment-Analysis
-Apply NLP for VLSP dataset
-# Phân Loại Cảm Xúc Văn Bản Tiếng Việt (Vietnamese Sentiment Analysis)
+# Vietnamese Sentiment Analysis
+Applying NLP techniques to the VLSP dataset.
 
-Học phần: **Cách tiếp cận hiện đại trong Xử lý ngôn ngữ tự nhiên** Giảng viên hướng dẫn: **PGS.TS. Quản Thành Thơ** Sinh viên thực hiện: **Nguyễn Quốc Bảo** (MSSV: 2470076)
+**Course:** Modern Approaches to Natural Language Processing  
+**Instructor:** Assoc. Prof. Dr. Quan Thanh Tho  
+**Student:** Nguyen Quoc Bao (Student ID: 2470076)  
 
 ---
 
-## 📝 Giới thiệu Dự án
-Dự án tập trung vào bài toán phân loại cảm xúc văn bản tiếng Việt sử dụng cả các mô hình học sâu truyền thống và các mô hình ngôn ngữ lớn (Pre-trained Language Models) hiện đại nhằm so sánh, đánh giá hiệu năng và chi phí tính toán.
+## 📝 Project Overview
+This project focuses on the task of Vietnamese text sentiment analysis. It implements and compares traditional deep learning architectures alongside modern Large Language Models (Pre-trained Language Models) to evaluate performance benchmarks against computational costs.
 
-### Các mô hình được triển khai trong dự án:
+### Implemented Models:
 1. **TextCNN**
 2. **BiLSTM - CNN**
-3. **BiLSTM - CNN kết hợp Multi-Head Attention**
-4. **PhoBERT** (Pre-trained dành riêng cho tiếng Việt)
+3. **BiLSTM - CNN combined with Multi-Head Attention**
+4. **PhoBERT** (State-of-the-art pre-trained model optimized for Vietnamese)
 5. **XLM-RoBERTa**
 
 ---
 
-## 📂 Cấu trúc Kho lưu trữ
-* `docs/`: Chứa file báo cáo chi tiết dạng Word (`2470076_NguyenQuocBao.docx`).
-* `notebooks/`: Chứa file mã nguồn triển khai toàn bộ quá trình tiền xử lý, huấn luyện và đánh giá (`2470076_NguyenQuocBao.ipynb`).
+## 📂 Repository Structure
+* `docs/`: Contains the detailed project report in Word format (`2470076_NguyenQuocBao.docx`).
+* `notebooks/`: Contains the Jupyter Notebook covering data preprocessing, model training, and evaluation (`2470076_NguyenQuocBao.ipynb`).
 
 ---
 
-## 🚀 Hướng dẫn Chạy Code
+## 🚀 Getting Started
 
-### 1. Chuẩn bị dữ liệu:
-Tải các file dữ liệu cần thiết và tải lên Google Drive cá nhân của bạn theo đường dẫn: `MyDrive/NLP/Assignment`.
-* Link dữ liệu tham khảo (nếu có): [Google Drive Folder](https://drive.google.com/drive/folders/179OY3vLY7P4RzeCqDwBnutK-oBu-dwQ0?usp=sharing)
+### 1. Data Preparation
+Download the required dataset files and upload them to your personal Google Drive using the following path: `MyDrive/NLP/Assignment`.
+* Reference Data Link (if applicable): [Google Drive Folder](https://drive.google.com/drive/folders/179OY3vLY7P4RzeCqDwBnutK-oBu-dwQ0?usp=sharing)
 
-### 2. Môi trường thực thi:
-* Khuyến khích chạy file notebook trên **Google Colab**.
-* Nên cấu hình Hardware accelerator sang **GPU (ưu tiên L4 hoặc T4)** để tăng tốc độ huấn luyện mô hình (đặc biệt là PhoBERT và XLM-RoBERTa).
-* Nếu tài nguyên tính toán hạn chế, bạn có thể cân nhắc chỉ chạy kiểm thử mô hình XLM-RoBERTa hoặc giảm dung lượng batch size.
+### 2. Execution Environment
+* It is highly recommended to run the notebook via **Google Colab**.
+* Enable hardware acceleration by switching the runtime to a **GPU (preferably T4 or L4)** to significantly accelerate training times, especially for PhoBERT and XLM-RoBERTa.
+* If computational resources are limited, consider evaluating only the XLM-RoBERTa model or reducing the training batch size.
 
 ---
 
-## 📊 Kết quả và Nhận xét (Tóm tắt)
-* Các mô hình truyền thống (TextCNN, BiLSTM) giữ mức độ chính xác ổn định quanh mức ~70% với chi phí tính toán thấp.
-* Các mô hình Transformer pre-trained (PhoBERT, XLM-RoBERTa) đem lại cải thiện rõ rệt về khả năng hiểu ngữ nghĩa, tuy nhiên yêu cầu tài nguyên phần cứng lớn hơn.
-* Chi tiết phân tích đặc trưng văn bản, các bước tiền xử lý (Clean data, Tokenization, Vectorization) và bảng biểu so sánh (mIoU, Accuracy, F1-Score) vui lòng xem tại báo cáo trong thư mục `docs/`.
+## 📊 Summary of Results & Remarks
+* **Traditional Models (TextCNN, BiLSTM):** Maintained a stable accuracy rate of approximately ~70% while requiring minimal computational overhead.
+* **Pre-trained Transformer Models (PhoBERT, XLM-RoBERTa):** Demonstrated substantial improvements in contextual semantic understanding, though they demand higher hardware resource allocation.
+* For an in-depth analysis of text features, preprocessing workflows (Data Cleaning, Tokenization, Vectorization), and comparative benchmark metrics (mIoU, Accuracy, F1-Score), please refer to the comprehensive report located in the `docs/` directory.
