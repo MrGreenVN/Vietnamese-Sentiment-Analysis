@@ -2,8 +2,6 @@
 Applying NLP techniques to the VLSP dataset.
 
 **Course:** Modern Approaches to Natural Language Processing  
-**Instructor:** Assoc. Prof. Dr. Quan Thanh Tho  
-**Student:** Nguyen Quoc Bao (Student ID: 2470076)  
 
 ---
 
